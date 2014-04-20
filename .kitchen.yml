@@ -16,6 +16,13 @@ platforms:
 #      customize:
 #        memory: 2048
 #        cpuexecutioncap: 50
+##
+# Using [OpsCode Vagrant boxes](https://github.com/opscode/bento)
+##
+  - name: centos-6.5
+    driver:
+      customize:
+        memory: 2048
 
 suites:
   - name: default

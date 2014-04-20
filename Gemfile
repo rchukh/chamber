@@ -17,6 +17,8 @@ gem 'berkshelf'
 group :development do  
   gem 'test-kitchen'
   gem 'kitchen-vagrant'
+  gem 'foodcritic'
 #  gem 'guard'
 #  gem 'guard-kitchen'
-end  
+#  gem 'guard-foodcritic'
+end

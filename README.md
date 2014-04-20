@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/rchukh/chef-chamber.png?label=ready&title=Ready)](https://waffle.io/rchukh/chef-chamber)
 # Chamber Cookbook
 
 TODO: Enter the cookbook description here.

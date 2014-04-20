@@ -24,4 +24,5 @@ bin/*
 !.boxes/README.md
 
 # NodeJS modules
-.node_modules/
+node_modules/
+

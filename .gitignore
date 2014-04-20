@@ -22,3 +22,6 @@ bin/*
 # Existing custom vagrant boxes
 .boxes/*
 !.boxes/README.md
+
+# NodeJS modules
+.node_modules/

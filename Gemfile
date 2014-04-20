@@ -14,11 +14,19 @@ gem 'berkshelf'
 #   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
 # end
 
-group :development do  
+group :development do
+  gem 'rake'
   gem 'test-kitchen'
   gem 'kitchen-vagrant'
-  gem 'foodcritic'
-#  gem 'guard'
-#  gem 'guard-kitchen'
-#  gem 'guard-foodcritic'
+end
+
+group :lint do
+  gem 'foodcritic', '~> 3.0'
+  gem 'rubocop',    '~> 0.20.1'
+end
+
+group :unit do
+  gem 'chefspec',  '~> 3.4'
+  gem 'busser-bats'
+  gem 'busser-minitest'
 end

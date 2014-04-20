@@ -1,0 +1,24 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+##
+# Using a custom Vagrant box.
+##
+#  - name: devenv-centos-6.5
+#    driver:
+#      box: devenv-centos-6.5_raw
+#      box_url: ../../../.boxes/devenv-centos-6.5_raw.box
+#      customize:
+#        memory: 2048
+#        cpuexecutioncap: 50
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chamber::default]
+    attributes:

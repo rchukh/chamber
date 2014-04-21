@@ -8,5 +8,7 @@ version          '0.0.1'
 
 depends 'build-essential'
 depends 'git', '~> 4.0'
+depends 'java', '~> 1.22'
+depends 'java_ext'
 
 supports 'centos'

@@ -32,5 +32,6 @@ suites:
       - recipe[yum-epel]
       - recipe[git]
       - recipe[chamber::jdk]
+      - recipe[chamber::maven]
       - recipe[chamber::postgresql]
     attributes:

@@ -1,4 +1,4 @@
-# Vendor files.
+# Vendor files
 
 Currently expected:
 

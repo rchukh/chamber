@@ -15,4 +15,6 @@ group 'development' do
     #cookbook 'postgresql'
     cookbook 'postgresql', git: "https://github.com/javornikolov/postgresql.git", branch: "COOK-4095"
     cookbook 'database'
+
+    cookbook 'maven'
 end

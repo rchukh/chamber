@@ -16,5 +16,6 @@ depends 'java', '~> 1.22'
 depends 'java_ext'
 depends 'postgresql'
 depends 'database'
+depends 'maven', '~> 1.1'
 
 supports 'centos'

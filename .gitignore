@@ -25,3 +25,7 @@ bin/*
 
 # NodeJS modules
 node_modules/
+
+# Vendors static files
+files/default/vendor/*
+!files/default/vendor/README.md

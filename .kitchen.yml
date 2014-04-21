@@ -4,6 +4,8 @@ driver:
 
 provisioner:
   name: chef_solo
+  solo_rb:
+    file_cache_path: /var/chef/cache
 
 platforms:
 ##
@@ -28,6 +30,17 @@ suites:
   - name: default
     run_list:
       - recipe[yum-epel]
+      - recipe[chamber::prepare]
       - recipe[git]
+      - recipe[java]
+      - recipe[java_ext::jce]
       - recipe[chamber::default]
-    attributes:
+    attributes: {
+#      java: {
+#        jdk_version = '7',
+#        install_flavor = 'oracle',
+#        oracle: {
+#          accept_oracle_download_terms: true
+#        }
+#      }
+    }

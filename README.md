@@ -13,28 +13,11 @@ There are currently no supported attributes.
 
 ## Recipes
 
-<table>
-  <tr>
-    <th>Recipe</th>
-    <th>Description</th>
-    <th>[Vendor files](files/default/vendor/README.md)</th>
-  </tr>
-  <tr>
-    <td><tt>chamber::postgresql</tt></td>
-    <td>Installs and configures PostgreSQL</td>
-    <td>no</td>
-  </tr>
-  <tr>
-    <td><tt>chamber::jdk</tt></td>
-    <td>Installs and configures Oracle JDK 7. Vendor files expect  for details.</td>
-    <td><b>yes</b</td>
-  </tr>
-  <tr>
-    <td><tt>chamber::maven</tt></td>
-    <td>Installs Maven 3</td>
-    <td>no</td>
-  </tr>
-</table>
+| Recipe  | Description | [Vendor files](files/default/vendor/README.md) |
+| ------------- | ------------- | ------------- |
+| ```chamber::postgresql``` | Installs and configures PostgreSQL | no |
+| ```chamber::jdk``` | Installs and configures Oracle JDK 7. | **yes** |
+| ```chamber::maven``` | Installs Maven 3 | no |
 
 ## Usage
 
@@ -61,8 +44,7 @@ Include `chamber` recipes in your node's `run_list`:
 
 ## License and Authors
 
-This cookbook reuses some of the [existing chef cookbooks](metadata.rb).
-Please make sure that their license suits your case.
+This cookbook reuses some of the [existing chef cookbooks](metadata.rb). Please make sure that their license suits your case.
 
 ```text
 Copyright 2014, Roman Chukh (<roman.chukh@gmail.com>)

@@ -1,39 +1,51 @@
-[![Stories in Ready](https://badge.waffle.io/rchukh/chef-chamber.png?label=ready&title=Ready)](https://waffle.io/rchukh/chef-chamber)
-# Chamber Cookbook
+[![Build Status](https://travis-ci.org/rchukh/chef-chamber.svg)](https://travis-ci.org/rchukh/chef-chamber) [![Stories in Ready](https://badge.waffle.io/rchukh/chef-chamber.png?label=ready&title=Ready)](https://waffle.io/rchukh/chef-chamber)
 
-TODO: Enter the cookbook description here.
+# Project Chamber
+Project Chamber is a Chef cookbook for provisioning a complete base environment for development needs.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+- CentOS
 
 ## Attributes
 
+There are currently no supported attributes.
+
+## Recipes
+
 <table>
   <tr>
-    <th>Key</th>
-    <th>Type</th>
+    <th>Recipe</th>
     <th>Description</th>
-    <th>Default</th>
+    <th>[Vendor files](files/default/vendor/README.md)</th>
   </tr>
   <tr>
-    <td><tt>['chamber']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>chamber::postgresql</tt></td>
+    <td>Installs and configures PostgreSQL</td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td><tt>chamber::jdk</tt></td>
+    <td>Installs and configures Oracle JDK 7. Vendor files expect  for details.</td>
+    <td><b>yes</b</td>
+  </tr>
+  <tr>
+    <td><tt>chamber::maven</tt></td>
+    <td>Installs Maven 3</td>
+    <td>no</td>
   </tr>
 </table>
 
 ## Usage
 
-### chamber::default
-
-Include `chamber` in your node's `run_list`:
+Include `chamber` recipes in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[chamber::default]"
+    "recipe[chamber::postgresql]"
+    "recipe[chamber::jdk]",
+    "recipe[chamber::maven]"
   ]
 }
 ```
@@ -49,12 +61,8 @@ Include `chamber` in your node's `run_list`:
 
 ## License and Authors
 
-This cookbook reuses some of the existing chef cookbooks.
+This cookbook reuses some of the [existing chef cookbooks](metadata.rb).
 Please make sure that their license suits your case.
-List of reused cookbooks:
-
-- TODO: Add links to cookbooks;
-
 
 ```text
 Copyright 2014, Roman Chukh (<roman.chukh@gmail.com>)

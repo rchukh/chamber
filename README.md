@@ -1,39 +1,34 @@
-[![Stories in Ready](https://badge.waffle.io/rchukh/chef-chamber.png?label=ready&title=Ready)](https://waffle.io/rchukh/chef-chamber)
-# Chamber Cookbook
+[![Build Status](https://travis-ci.org/rchukh/chef-chamber.svg)](https://travis-ci.org/rchukh/chef-chamber) [![Stories in Ready](https://badge.waffle.io/rchukh/chef-chamber.png?label=ready&title=Ready)](https://waffle.io/rchukh/chef-chamber)
 
-TODO: Enter the cookbook description here.
+# Project Chamber
+Project Chamber is a Chef cookbook for provisioning a complete base environment for development needs.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+- CentOS
 
 ## Attributes
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['chamber']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+There are currently no supported attributes.
+
+## Recipes
+
+| Recipe  | Description | [Vendor files](files/default/vendor/README.md) |
+| ------------- | ------------- | ------------- |
+| ```chamber::postgresql``` | Installs and configures PostgreSQL | no |
+| ```chamber::jdk``` | Installs and configures Oracle JDK 7. | **yes** |
+| ```chamber::maven``` | Installs Maven 3 | no |
 
 ## Usage
 
-### chamber::default
-
-Include `chamber` in your node's `run_list`:
+Include `chamber` recipes in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[chamber::default]"
+    "recipe[chamber::postgresql]"
+    "recipe[chamber::jdk]",
+    "recipe[chamber::maven]"
   ]
 }
 ```
@@ -49,12 +44,7 @@ Include `chamber` in your node's `run_list`:
 
 ## License and Authors
 
-This cookbook reuses some of the existing chef cookbooks.
-Please make sure that their license suits your case.
-List of reused cookbooks:
-
-- TODO: Add links to cookbooks;
-
+This cookbook reuses some of the [existing chef cookbooks](metadata.rb). Please make sure that their license suits your case.
 
 ```text
 Copyright 2014, Roman Chukh (<roman.chukh@gmail.com>)

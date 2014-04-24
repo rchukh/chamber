@@ -1,10 +1,10 @@
 require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
-require 'foodcritic'
-require 'kitchen'
 
 # Style tests. Rubocop and Foodcritic
 namespace :style do
+  require 'foodcritic'
+  require 'rubocop/rake_task'
+
   desc 'Run Ruby style checks'
   Rubocop::RakeTask.new(:ruby)
 
@@ -25,6 +25,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 # Integration tests. Kitchen.ci
 namespace :integration do
+  require 'kitchen'
   desc 'Run Test Kitchen with Vagrant'
   task :vagrant do
     Kitchen.logger = Kitchen.default_file_logger

@@ -2,6 +2,8 @@ source "https://api.berkshelf.com"
 
 metadata
 
+cookbook 'chef-sugar'
+
 cookbook 'build-essential'
 cookbook 'yum-epel'
 cookbook 'git'
@@ -15,4 +17,5 @@ group 'development' do
 
     cookbook 'maven'
     cookbook 'tomcat', git: 'https://github.com/rchukh/chef-tomcat', branch: 'master'
+    cookbook 'nodejs', git: 'https://github.com/mdxp/nodejs-cookbook.git', branch: 'master'
 end

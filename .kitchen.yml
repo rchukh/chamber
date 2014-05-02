@@ -31,9 +31,11 @@ suites:
     run_list:
       - recipe[yum-epel]
       - recipe[git]
+      - recipe[chamber::default]
       - recipe[chamber::jdk]
       - recipe[chamber::maven]
       - recipe[chamber::postgresql]
       - recipe[chamber::tomcat]
+      - recipe[chamber::nodejs]
     attributes:
     data_bags_path: "test/integration/default/data_bags"

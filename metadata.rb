@@ -14,6 +14,7 @@ recipe 'tomcat', 'Installs Tomcat 7'
 
 supports 'centos'
 
+depends 'chef-sugar'
 depends 'build-essential', '~> 2.0.2'
 depends 'git', '~> 4.0'
 depends 'java', '~> 1.22'
@@ -22,3 +23,4 @@ depends 'postgresql'
 depends 'database'
 depends 'maven', '~> 1.1'
 depends 'tomcat', '~> 0.1'
+depends 'nodejs', '~> 1.3'

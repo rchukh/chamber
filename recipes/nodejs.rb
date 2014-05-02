@@ -12,10 +12,8 @@ node.set['nodejs']['npm'] = '1.4.4'
 # Make sure included recipes are using correct values in attributes which are reusing the ones defined above
 node.from_file(run_context.resolve_attribute('nodejs', 'default'))
 
-include_recipe "nodejs"
-include_recipe "nodejs::npm"
+include_recipe 'nodejs'
+include_recipe 'nodejs::npm'
 
 # Install command line grunt
-if not installed?('grunt')
-  execute 'npm install -g grunt-cli'
-end
+execute 'npm install -g grunt-cli' unless installed?('grunt')

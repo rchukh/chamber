@@ -14,4 +14,5 @@ group 'development' do
     cookbook 'database'
 
     cookbook 'maven'
+    cookbook 'tomcat', git: 'https://github.com/rchukh/chef-tomcat', branch: 'master'
 end

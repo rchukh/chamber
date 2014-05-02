@@ -10,6 +10,7 @@ recipe 'default', 'Currently does nothing'
 recipe 'jdk', 'Installs and configures Oracle JDK 7'
 recipe 'postgresql', 'Installs and configures PostgreSQL'
 recipe 'maven', 'Installs Maven 3'
+recipe 'tomcat', 'Installs Tomcat 7'
 
 supports 'centos'
 
@@ -20,3 +21,4 @@ depends 'java_ext'
 depends 'postgresql'
 depends 'database'
 depends 'maven', '~> 1.1'
+depends 'tomcat', '~> 0.1'

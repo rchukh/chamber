@@ -2,6 +2,8 @@
 # Cookbook Name:: chamber
 # Recipe:: tomcat
 #
+# Dependency:: chamber::jdk
+#
 node.set[:tomcat][:version] = '7'
 node.set[:tomcat][:java_opts] = '-Xmx32M -Xmx128M -Djava.awt.headless=true'
 
@@ -9,3 +11,4 @@ node.set[:tomcat][:java_opts] = '-Xmx32M -Xmx128M -Djava.awt.headless=true'
 node.from_file(run_context.resolve_attribute('tomcat', 'default'))
 
 include_recipe 'tomcat::default'
+include_recipe 'tomcat::users'

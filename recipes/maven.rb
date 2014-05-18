@@ -2,6 +2,8 @@
 # Cookbook Name:: chamber
 # Recipe:: maven
 #
+# Dependency:: chamber::jdk
+#
 node.set['maven']['version'] = 3
 
 # Make sure included recipes are using correct values in attributes which are reusing the ones defined above

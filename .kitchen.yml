@@ -5,6 +5,7 @@ driver:
 provisioner:
   name: chef_solo
   solo_rb:
+    ssl_verify_mode: verify_peer
     file_cache_path: /var/chef/cache
 
 platforms:
@@ -34,8 +35,9 @@ suites:
       - recipe[chamber::default]
       - recipe[chamber::jdk]
       - recipe[chamber::maven]
+      - recipe[chamber::nodejs]
       - recipe[chamber::postgresql]
       - recipe[chamber::tomcat]
-      - recipe[chamber::nodejs]
+      - recipe[chamber::solr]
     attributes:
     data_bags_path: "test/integration/default/data_bags"

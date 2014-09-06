@@ -1,7 +1,7 @@
 {
   "name": "chamber",
   "repository": "https://github.com/rchukh/chef-chamber",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "devDependencies": {
     "grunt": "latest",
     "grunt-conventional-changelog": "latest"

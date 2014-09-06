@@ -8,4 +8,5 @@ module.exports = function (grunt) {
     })
 
     grunt.loadNpmTasks('grunt-conventional-changelog');
+    grunt.registerTask('default', ['changelog']);
 };

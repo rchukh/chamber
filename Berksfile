@@ -17,6 +17,6 @@ group 'development' do
 
     cookbook 'maven'
     cookbook 'tomcat', git: 'https://github.com/rchukh/chef-tomcat', branch: 'master'
-    cookbook 'nodejs', git: 'https://github.com/mdxp/nodejs-cookbook.git', branch: 'master'
+    cookbook 'nodejs'
     cookbook 'chamber-solr', git: 'https://github.com/rchukh/chamber-solr', branch: 'master'
 end

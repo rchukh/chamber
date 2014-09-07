@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/rchukh/chef-chamber.svg)](https://travis-ci.org/rchukh/chef-chamber) [![Dependency Status](https://gemnasium.com/rchukh/chef-chamber.svg)](https://gemnasium.com/rchukh/chef-chamber) [![Stories in Ready](https://badge.waffle.io/rchukh/chef-chamber.png?label=ready&title=Ready)](https://waffle.io/rchukh/chef-chamber)
+[![Build Status](https://travis-ci.org/rchukh/chef-chamber.svg)](https://travis-ci.org/rchukh/chef-chamber) [![Dependency Status](https://gemnasium.com/rchukh/chef-chamber.svg)](https://gemnasium.com/rchukh/chef-chamber) 
+
+[![Stories in Ready](https://badge.waffle.io/rchukh/chamber.svg?label=ready&title=Ready)](http://waffle.io/rchukh/chamber) [![Stories in Progress](https://badge.waffle.io/rchukh/chamber.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/rchukh/chamber)
+
 
 # Project Chamber
 Project Chamber is a Chef cookbook for provisioning a complete base environment for development needs.

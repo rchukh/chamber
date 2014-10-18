@@ -1,12 +1,27 @@
 ---
-driver:
-  name: vagrant
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+  vagrantfile_erb: .kitchen.Vagrantfile.erb
+  plugins:
+    cachier:
+      cache:
+        scope: ":box"
+        auto_detect: false
+        enable:
+          - yum
+        generic_buckets:
+          - ['chef', '/var/chef/cache']
+#  network:
+#  - ["forwarded_port", {guest: 5601, host: 8081}]
+  customize:
+    memory: 2048
 
 provisioner:
   name: chef_solo
   solo_rb:
     ssl_verify_mode: verify_peer
-    file_cache_path: /var/chef/cache
+    file_cache_path: '/var/chef/cache'
 
 platforms:
 ##
@@ -16,22 +31,15 @@ platforms:
 #    driver:
 #      box: devenv-centos-6.5_raw
 #      box_url: ../../../.boxes/devenv-centos-6.5_raw.box
-#      customize:
-#        memory: 2048
-#        cpuexecutioncap: 50
 ##
 # Using [OpsCode Vagrant boxes](https://github.com/opscode/bento)
-##
   - name: centos-6.5
-    driver:
-      customize:
-        memory: 2048
 
 suites:
   - name: default
     run_list:
-      - recipe[yum-epel]
-      - recipe[git]
+      - recipe[yum-epel::default]
+      - recipe[git::default]
       - recipe[chamber::default]
       - recipe[chamber::jdk]
       - recipe[chamber::maven]
